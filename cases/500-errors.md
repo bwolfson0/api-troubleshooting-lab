@@ -17,3 +17,5 @@ A runtime error occurs during request processing due to an undefined variable, c
 
 **Resolution**  
 Fix the server-side code by ensuring all variables are properly defined and handled before use.
+
+![500 Error Response](../images/500-crash.png)
