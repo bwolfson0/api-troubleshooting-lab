@@ -54,6 +54,7 @@ Provide a valid API key in the request headers
 ## Scenarios
 
 - [400 Unsupported HTTP Method](cases/400-Unsupported-HTTP-Method.md)
+- [400 Invalid Query Parameter](cases/400-Invalid-Query-Param.md)
 - [401 Authentication](cases/401-auth.md)
 - [403 Authorization](cases/403-permissions.md)
 - [404 Not Found](cases/404-routing.md)
