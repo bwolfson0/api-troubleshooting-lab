@@ -25,4 +25,4 @@ Ensure the `page` query parameter is a valid number greater than or equal to 1 (
 
 **Example Response:**  
 
-![400 Invalid Query Parameter](images/400-invalid-query.png)
+![test](https://github.com/bwolfson0/api-troubleshooting-lab/edit/main/cases/400-Invalid-Query-Param.md)
