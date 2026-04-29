@@ -25,4 +25,4 @@ Ensure the `page` query parameter is a valid number greater than or equal to 1 (
 
 **Example Response:**  
 
-![400 Invalid Query Parameter](../images/400-invalid-query.png)
+![400 Invalid Query Parameter](https://github.com/.../400-invalid-query.png)
