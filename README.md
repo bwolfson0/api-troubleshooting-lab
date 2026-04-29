@@ -58,7 +58,7 @@ Provide a valid API key in the request headers
 - [403 Authorization](cases/403-permissions.md)
 - [404 Not Found](cases/404-routing.md)
 - [500 Server Error](cases/500-error.md)
-- [500 Dependency Error](cases/500-Dependency-Failure)
+- [500 Dependency Error](cases/500-Dependency-Failure.md)
 - [429 Rate Limiting](cases/429-rate-limit.md)
 
 ---
