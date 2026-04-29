@@ -57,7 +57,7 @@ Provide a valid API key in the request headers
 - [400 Invalid Query Parameter](cases/400-Invalid-Query-Param.md)
 - [401 Invalid API Key](cases/401-Invalid-API-Key.md)
 - [401 Missing API Key](cases/401-Missing-API-Key.md)
-- [403 Authorization](cases/403-permissions.md)
+- [403 Insufficient Permission](cases/403-Insufficient-Permission.md)
 - [404 Not Found](cases/404-routing.md)
 - [500 Server Error](cases/500-error.md)
 - [500 Dependency Error](cases/500-Dependency-Failure.md)
