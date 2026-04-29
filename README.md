@@ -53,7 +53,7 @@ Provide a valid API key in the request headers
 
 ## Scenarios
 
-- [400 Validation Errors](cases/400-validation.md)
+- [400 Unsupported HTTP Method](cases/400-Unsupported-HTTP-Method.md)
 - [401 Authentication](cases/401-auth.md)
 - [403 Authorization](cases/403-permissions.md)
 - [404 Not Found](cases/404-routing.md)
