@@ -24,4 +24,5 @@ The `/users` endpoint does not support POST requests. It is configured to handle
 Use the correct HTTP method and endpoint combination. In this case, `/users` should be accessed using GET for retrieving users.
 
 **Example Response:**  
+
 ![400 Unsupported Method](../images/400-unsupported-method.png)
