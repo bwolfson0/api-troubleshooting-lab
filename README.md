@@ -58,7 +58,7 @@ Provide a valid API key in the request headers
 - [401 Invalid API Key](cases/401-Invalid-API-Key.md)
 - [401 Missing API Key](cases/401-Missing-API-Key.md)
 - [403 Insufficient Permission](cases/403-Insufficient-Permission.md)
-- [404 Not Found](cases/404-routing.md)
+- [404 Resource Does Not Exist](cases/404-Resource-Does-Not-Exist.md)
 - [500 Server Error](cases/500-error.md)
 - [500 Dependency Error](cases/500-Dependency-Failure.md)
 - [429 Rate Limiting](cases/429-rate-limit.md)
