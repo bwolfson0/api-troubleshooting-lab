@@ -53,23 +53,23 @@ Provide a valid API key in the request headers.
 ## Scenarios
 
 ### 400 Bad Request
-- [Unsupported HTTP Method](cases/400-Unsupported-HTTP-Method.md)  
-- [Invalid Query Parameter](cases/400-Invalid-Query-Param.md)  
+- [Unsupported HTTP Method](cases/400-unsupported-http-method.md)  
+- [Invalid Query Parameter](cases/400-invalid-query-param.md)  
 
 ### 401 Unauthorized
-- [Invalid API Key](cases/401-Invalid-API-Key.md)  
-- [Missing API Key](cases/401-Missing-API-Key.md)  
+- [Invalid API Key](cases/401-invalid-api-key.md)  
+- [Missing API Key](cases/401-missing-api-key.md)  
 
 ### 403 Forbidden
-- [Insufficient Permissions](cases/403-Insufficient-Permission.md)  
+- [Insufficient Permissions](cases/403-insufficient-permission.md)  
 
 ### 404 Not Found
-- [Resource Does Not Exist](cases/404-Resource-Does-Not-Exist.md)  
-- [Route Mismatch](cases/404-Route-Mismatch.md)  
+- [Resource Does Not Exist](cases/404-resource-does-not-exist.md)  
+- [Route Mismatch](cases/404-route-mismatch.md)  
 
 ### 500 Internal Server Error
-- [Server Crash](cases/500-Error.md)  
-- [Dependency Failure](cases/500-Dependency-Failure.md)  
+- [Server Crash](cases/500-error.md)  
+- [Dependency Failure](cases/500-dependency-failure.md)  
 
 ### 429 Too Many Requests
 - [Rate Limiting](cases/429-rate-limit.md)  
