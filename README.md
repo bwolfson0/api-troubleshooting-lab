@@ -73,7 +73,11 @@ Provide a valid API key in the request headers.
 - [Database Table Missing](advanced-cases/api-db/500-db-failure.md)
 
 ### 429 Too Many Requests
-- [Rate Limiting](cases/429-rate-limit.md)  
+- [Rate Limiting](cases/429-rate-limit.md)
+
+### Advanced Cases
+- [Database Table Missing](advanced-cases/api-db/500-db-failure.md)
+- [200 Incorrect Data Returned](advanced-cases/api-db/200-wrong-data.md)
 
 ---
 
