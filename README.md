@@ -70,7 +70,6 @@ Provide a valid API key in the request headers.
 ### 500 Internal Server Error
 - [Server Crash](cases/500-error.md)  
 - [Dependency Failure](cases/500-dependency-failure.md)
-- [Database Table Missing](advanced-cases/api-db/500-db-failure.md)
 
 ### 429 Too Many Requests
 - [Rate Limiting](cases/429-rate-limit.md)
