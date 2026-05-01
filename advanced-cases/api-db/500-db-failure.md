@@ -26,8 +26,9 @@ API should return user data for a valid user ID.
 ---
 
 ## Log Output
+```
 SQLITE_ERROR: no such table: non_existing_table
-
+```
 ---
 
 ## Analysis
