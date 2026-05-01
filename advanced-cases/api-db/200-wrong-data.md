@@ -32,8 +32,10 @@ API should return the correct user data corresponding to the requested user ID.
 
 ## Log Output
 
+```
 Fetching user from DB: 1
 Fetching user from DB: 2
+```
 
 ---
 
@@ -52,9 +54,9 @@ The database query is hardcoded (`WHERE id = 1`) and does not use the request pa
 ## Resolution
 
 Update the query to use the request parameter:
-
+```
 SELECT * FROM users WHERE id = ?
-
+```
 and pass the user ID as a parameter.
 
 ---
