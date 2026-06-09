@@ -10,7 +10,7 @@ The objective is to understand why the browser receives a **304 Not Modified** r
 
 ## Issue
 
-Refreshing the page returns **304 Not Modified** instead of **200 OK**, raising the question of whether the browser is requesting outdated content or the server is behaving unexpectedly.
+A page refresh returns **304 Not Modified** instead of **200 OK**, leading to questions about whether the browser is displaying stale content or whether the server is functioning correctly.
 
 ---
 
@@ -38,25 +38,25 @@ Refreshing the page returns **304 Not Modified** instead of **200 OK**, raising 
 
 ## Observed Behavior
 
-The browser sends a **GET** request and receives the following response:
+The browser sends a **GET** request and receives:
 
 ```
 Status Code: 304 Not Modified
 ```
 
-No response body is returned because the browser already has a cached copy of the resource.
+Unlike a **200 OK** response, the server does not transmit the HTML response body again. Instead, the browser reuses the cached copy that it already stored locally.
 
 ---
 
 ## Expected Behavior
 
-If the resource has changed, the server should return:
+If the requested resource has changed, the server should return:
 
 ```
 200 OK
 ```
 
-and provide an updated response body.
+along with an updated response body.
 
 If the resource has not changed, the server may return:
 
@@ -64,7 +64,7 @@ If the resource has not changed, the server may return:
 304 Not Modified
 ```
 
-allowing the browser to reuse its cached copy.
+allowing the browser to reuse its cached copy instead of downloading the resource again.
 
 ---
 
@@ -94,15 +94,26 @@ allowing the browser to reuse its cached copy.
 
 ---
 
+## Why These Headers Matter
+
+| Header | Purpose |
+|------------|------------|
+| **If-Modified-Since** | Tells the server when the browser last received the resource. |
+| **Last-Modified** | Indicates when the server last updated the resource, allowing it to compare timestamps. |
+| **ETag** | Acts as a version identifier for the resource and provides another method of cache validation. |
+| **Cache-Control: max-age=0** | Instructs the browser to validate its cached copy with the server before reusing it. |
+
+---
+
 ## Analysis
 
-The browser includes an **If-Modified-Since** header containing the timestamp of its cached resource.
+The browser already has a cached copy of the page and includes an **If-Modified-Since** header when making the request.
 
-The server compares this value with the current version of the resource and determines that no changes have occurred since that timestamp.
+The server compares this value with its **Last-Modified** timestamp and determines that the resource has not changed.
 
-Instead of transmitting the resource again, the server returns **304 Not Modified**, allowing the browser to continue using its cached copy.
+Rather than transmitting the HTML document again, the server returns **304 Not Modified**, allowing the browser to reuse its existing cached copy.
 
-The matching **If-Modified-Since** and **Last-Modified** values support this conclusion.
+The presence of both **Last-Modified** and **ETag** provides cache validation mechanisms that help avoid unnecessary data transfers while ensuring the browser displays the current version of the resource.
 
 ---
 
@@ -110,7 +121,7 @@ The matching **If-Modified-Since** and **Last-Modified** values support this con
 
 No application or server error was identified.
 
-The response is the result of successful HTTP cache validation between the browser and the server.
+The browser and server successfully performed HTTP cache validation, resulting in an expected **304 Not Modified** response.
 
 ---
 
@@ -118,7 +129,7 @@ The response is the result of successful HTTP cache validation between the brows
 
 No corrective action is required.
 
-The observed behavior is expected and indicates that browser caching is functioning correctly.
+The observed behavior indicates that browser caching is functioning correctly.
 
 If updated content is required, performing a hard refresh or clearing the browser cache will force retrieval of a new copy of the resource.
 
