@@ -2,7 +2,7 @@
 
 A portfolio project demonstrating structured API troubleshooting and root cause analysis using **Postman** and a local **Node.js / Express** API.
 
-This repository simulates real-world API support scenarios commonly encountered by Technical Support Engineers and Product Support Engineers. Each investigation follows a repeatable process to reproduce issues, collect evidence, identify the failure layer, determine the root cause, and document a resolution.
+This repository simulates realistic API support scenarios commonly encountered by Technical Support Engineers and Product Support Engineers. Each investigation follows a consistent process to reproduce an issue, collect evidence, identify the failure layer, determine the root cause, and document a resolution.
 
 ---
 
@@ -23,7 +23,7 @@ This repository simulates real-world API support scenarios commonly encountered 
 
 # Investigation Methodology
 
-Every case follows the same structured troubleshooting workflow:
+Each case follows a structured troubleshooting workflow:
 
 1. Reproduce the issue
 2. Observe the behavior
@@ -37,75 +37,53 @@ This mirrors the investigation process used by technical support teams when diag
 
 ---
 
-# Scenario Coverage
+# Scenarios
 
-## 400 Bad Request
+### 400 Bad Request
 
-- Invalid Query Parameter
-- Unsupported HTTP Method
+- [Unsupported HTTP Method](cases/400-unsupported-http-method.md)
+- [Invalid Query Parameter](cases/400-invalid-query-param.md)
 
-## 401 Unauthorized
+### 401 Unauthorized
 
-- Missing API Key
-- Invalid API Key
+- [Invalid API Key](cases/401-invalid-api-key.md)
+- [Missing API Key](cases/401-missing-api-key.md)
 
-## 403 Forbidden
+### 403 Forbidden
 
-- Insufficient Permissions
+- [Insufficient Permissions](cases/403-insufficient-permission.md)
 
-## 404 Not Found
+### 404 Not Found
 
-- Resource Does Not Exist
-- Route Mismatch
+- [Resource Does Not Exist](cases/404-resource-does-not-exist.md)
+- [Route Mismatch](cases/404-route-mismatch.md)
 
-## 429 Too Many Requests
+### 429 Too Many Requests
 
-- Rate Limiting
+- [Rate Limiting](cases/429-rate-limit.md)
 
-## 500 Internal Server Error
+### 500 Internal Server Error
 
-- Server Crash
-- Dependency Failure
+- [Server Crash](cases/500-error.md)
+- [Dependency Failure](cases/500-dependency-failure.md)
 
----
+### Advanced Cases
 
-# Advanced Investigations
-
-## Database Table Missing
-
-A valid request reaches the correct endpoint but fails during server-side processing because the application references a database table that does not exist.
-
-**Skills demonstrated**
-
-- Log analysis
-- Server-side troubleshooting
-- Database failure identification
-- Root cause documentation
-
----
-
-## Incorrect Data Returned (200 OK)
-
-A successful HTTP response returns unexpected data, demonstrating that a successful status code does not always indicate a successful outcome.
-
-**Skills demonstrated**
-
-- Response validation
-- Data verification
-- Functional troubleshooting
+- [Database Table Missing](advanced-cases/api-db/500-db-failure.md)
+- [200 Incorrect Data Returned](advanced-cases/api-db/200-wrong-data.md)
 
 ---
 
 # Tools Used
 
-## Postman
+### Postman
 
 - API request construction
 - Header validation
 - Response inspection
 - Environment testing
 
-## Node.js & Express
+### Node.js & Express
 
 - Local API simulation
 - Error reproduction
@@ -123,7 +101,7 @@ Reproduce request
 Observe response
         ↓
 Analyze evidence
-        ↓
+        ↓ 
 Identify root cause
         ↓
 Document resolution
@@ -133,17 +111,6 @@ Document resolution
 
 # Purpose
 
-This project demonstrates practical troubleshooting skills through realistic API support scenarios rather than algorithm exercises or CRUD applications.
+This project demonstrates structured troubleshooting, evidence-based analysis, and clear technical communication through realistic API support scenarios.
 
-The focus is on structured investigation, evidence-based analysis, and clear technical communication—the same skills used by Technical Support Engineers and Product Support Engineers when diagnosing customer issues.
-
----
-
-# Future Investigation Ideas
-
-- Browser DevTools Network Analysis
-- HTTP 304 Cache Investigation
-- CORS Troubleshooting
-- Authentication Token Investigation
-- HAR File Analysis
-- API Performance Investigation
+The goal is to practice the investigation process used by Technical Support Engineers and Product Support Engineers when diagnosing API issues and documenting solutions.
