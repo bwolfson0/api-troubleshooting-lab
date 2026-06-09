@@ -140,8 +140,8 @@ If updated content is required, performing a hard refresh or clearing the browse
 
 ### Network Request
 
-![304 Network Request](images/304-network-overview.png)
+![304 Network Request](../images/304-network-overview.png)
 
 ### Request and Response Headers
 
-![304 Headers](images/304-headers.png)
+![304 Headers](../images/304-headers.png)
