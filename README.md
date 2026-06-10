@@ -1,93 +1,142 @@
 # API Troubleshooting Lab
 
-This project simulates real-world API issues and demonstrates structured troubleshooting techniques using Postman and a local Node.js API.
+A portfolio project demonstrating structured API and browser troubleshooting using **Postman**, **Chrome DevTools**, and local **Node.js / Express** applications.
+
+This repository contains reproducible investigations modeled after real Technical Support Engineer and Product Support Engineer workflows. Each investigation focuses on reproducing an issue, collecting evidence, identifying the root cause, documenting a resolution, and verifying the result.
 
 ---
 
-## Scenarios Covered
+# Skills Demonstrated
 
-- **400** — Validation / bad input  
-- **401** — Authentication failures  
-- **403** — Authorization / permission issues  
-- **404** — Routing and missing resources  
-- **500** — Server and dependency failures  
-- **429** — Rate limiting  
-
----
-
-## Debugging Approach
-
-1. Reproduce the issue  
-2. Compare working vs failing requests  
-3. Identify the failure layer:
-   - Input (400)
-   - Authentication (401)
-   - Authorization (403)
-   - Routing (404)
-   - Processing / Server (500)
-   - System limits (429)
-4. Determine root cause  
-5. Propose resolution  
+- API troubleshooting
+- Browser network analysis
+- HTTP request and response inspection
+- Root cause investigation
+- Authentication and authorization debugging
+- Browser cache investigation
+- CORS troubleshooting
+- Request validation
+- Route verification
+- Server-side error analysis
+- Technical documentation
+- Postman testing
+- Chrome DevTools
+- Problem reproduction and verification
 
 ---
 
-## Example Case
+# Investigation Methodology
 
-### 401 Unauthorized (Invalid API Key)
+Every investigation follows the same structured workflow:
 
-**Reproduction**  
-GET /users?page=2  
-Header: `x-api-key: wrongkey`
+1. Reproduce the issue
+2. Observe the behavior
+3. Collect evidence
+4. Analyze findings
+5. Determine the root cause
+6. Implement or recommend a resolution
+7. Verify the result
 
-**Observed Behavior**  
-401 Unauthorized
-
-**Root Cause**  
-Invalid API key causes authentication failure.
-
-**Resolution**  
-Provide a valid API key in the request headers.
+This mirrors the investigation process commonly used by Technical Support and Product Support teams when diagnosing customer issues.
 
 ---
 
-## Scenarios
+# API Investigations
 
 ### 400 Bad Request
-- [Unsupported HTTP Method](cases/400-unsupported-http-method.md)  
-- [Invalid Query Parameter](cases/400-invalid-query-param.md)  
+
+- [Unsupported HTTP Method](cases/400-unsupported-http-method.md)
+- [Invalid Query Parameter](cases/400-invalid-query-param.md)
 
 ### 401 Unauthorized
-- [Invalid API Key](cases/401-invalid-api-key.md)  
-- [Missing API Key](cases/401-missing-api-key.md)  
+
+- [Invalid API Key](cases/401-invalid-api-key.md)
+- [Missing API Key](cases/401-missing-api-key.md)
 
 ### 403 Forbidden
-- [Insufficient Permissions](cases/403-insufficient-permission.md)  
+
+- [Insufficient Permissions](cases/403-insufficient-permission.md)
 
 ### 404 Not Found
-- [Resource Does Not Exist](cases/404-resource-does-not-exist.md)  
-- [Route Mismatch](cases/404-route-mismatch.md)  
 
-### 500 Internal Server Error
-- [Server Crash](cases/500-error.md)  
-- [Dependency Failure](cases/500-dependency-failure.md)
+- [Resource Does Not Exist](cases/404-resource-does-not-exist.md)
+- [Route Mismatch](cases/404-route-mismatch.md)
 
 ### 429 Too Many Requests
+
 - [Rate Limiting](cases/429-rate-limit.md)
 
-### Advanced Cases
+### 500 Internal Server Error
+
+- [Server Crash](cases/500-error.md)
+- [Dependency Failure](cases/500-dependency-failure.md)
+
+---
+
+# Advanced API Investigations
+
 - [Database Table Missing](advanced-cases/api-db/500-db-failure.md)
 - [200 Incorrect Data Returned](advanced-cases/api-db/200-wrong-data.md)
 
 ---
 
-## Tools Used
+# Browser Investigations
 
-- Postman (API testing)  
-- Node.js (local API simulation)  
-- Express (server framework)  
+- [HTTP 304 Not Modified](browser-investigations/304-not-modified.md)
+- [CORS Policy Blocking API Request](browser-investigations/cors-request-blocked.md)
 
 ---
 
-## Purpose
+# Tools Used
 
-This project demonstrates the ability to diagnose API issues, identify root causes, and clearly communicate resolutions—core skills for technical support and support engineering roles.
+### Postman
+
+- API request construction
+- Header validation
+- Response inspection
+- Environment testing
+
+### Chrome DevTools
+
+- Browser Console
+- Network analysis
+- Request and response inspection
+- Header analysis
+
+### Node.js & Express
+
+- Local API simulation
+- Browser integration testing
+- Error reproduction
+
+---
+
+# Investigation Workflow
+
+```text
+Customer Report
+      ↓
+  Reproduce
+      ↓
+   Observe
+      ↓
+Collect Evidence
+      ↓
+   Analyze
+      ↓
+  Root Cause
+      ↓
+  Resolution
+      ↓
+ Verification
+```
+
+---
+
+# Purpose
+
+This project demonstrates structured troubleshooting, evidence-based analysis, and clear technical communication through realistic API and browser support scenarios.
+
+The focus is on developing the investigation process used by Technical Support Engineers and Product Support Engineers when diagnosing API integrations, browser behavior, authentication issues, and server responses.
+
+````
