@@ -1,43 +1,47 @@
 # API Troubleshooting Lab
 
-A portfolio project demonstrating structured API troubleshooting and root cause analysis using **Postman** and a local **Node.js / Express** API.
+A portfolio project demonstrating structured API and browser troubleshooting using **Postman**, **Chrome DevTools**, and local **Node.js / Express** applications.
 
-This repository simulates realistic API support scenarios commonly encountered by Technical Support Engineers and Product Support Engineers. Each investigation follows a consistent process to reproduce an issue, collect evidence, identify the failure layer, determine the root cause, and document a resolution.
+This repository contains reproducible investigations modeled after real Technical Support Engineer and Product Support Engineer workflows. Each investigation focuses on reproducing an issue, collecting evidence, identifying the root cause, documenting a resolution, and verifying the result.
 
 ---
 
 # Skills Demonstrated
 
 - API troubleshooting
-- HTTP request and response analysis
+- Browser network analysis
+- HTTP request and response inspection
 - Root cause investigation
 - Authentication and authorization debugging
+- Browser cache investigation
+- CORS troubleshooting
 - Request validation
 - Route verification
 - Server-side error analysis
 - Technical documentation
 - Postman testing
-- Problem reproduction and resolution
+- Chrome DevTools
+- Problem reproduction and verification
 
 ---
 
 # Investigation Methodology
 
-Each case follows a structured troubleshooting workflow:
+Every investigation follows the same structured workflow:
 
 1. Reproduce the issue
 2. Observe the behavior
-3. Compare expected vs. actual results
-4. Identify the failing layer
-5. Analyze available evidence
-6. Determine the root cause
-7. Document the resolution
+3. Collect evidence
+4. Analyze findings
+5. Determine the root cause
+6. Implement or recommend a resolution
+7. Verify the result
 
-This mirrors the investigation process used by technical support teams when diagnosing customer issues.
+This mirrors the investigation process commonly used by Technical Support and Product Support teams when diagnosing customer issues.
 
 ---
 
-# Scenarios
+# API Investigations
 
 ### 400 Bad Request
 
@@ -67,10 +71,19 @@ This mirrors the investigation process used by technical support teams when diag
 - [Server Crash](cases/500-error.md)
 - [Dependency Failure](cases/500-dependency-failure.md)
 
-### Advanced Cases
+---
+
+# Advanced API Investigations
 
 - [Database Table Missing](advanced-cases/api-db/500-db-failure.md)
 - [200 Incorrect Data Returned](advanced-cases/api-db/200-wrong-data.md)
+
+---
+
+# Browser Investigations
+
+- [HTTP 304 Not Modified](browser-investigations/304-not-modified.md)
+- [CORS Policy Blocking API Request](browser-investigations/cors-request-blocked.md)
 
 ---
 
@@ -83,34 +96,47 @@ This mirrors the investigation process used by technical support teams when diag
 - Response inspection
 - Environment testing
 
+### Chrome DevTools
+
+- Browser Console
+- Network analysis
+- Request and response inspection
+- Header analysis
+
 ### Node.js & Express
 
 - Local API simulation
+- Browser integration testing
 - Error reproduction
-- Server-side debugging
 
 ---
 
-# Example Investigation Workflow
+# Investigation Workflow
 
 ```text
-Customer reports issue
-        ↓
-Reproduce request
-        ↓
-Observe response
-        ↓
-Analyze evidence
-        ↓ 
-Identify root cause
-        ↓
-Document resolution
+Customer Report
+      ↓
+  Reproduce
+      ↓
+   Observe
+      ↓
+Collect Evidence
+      ↓
+   Analyze
+      ↓
+  Root Cause
+      ↓
+  Resolution
+      ↓
+ Verification
 ```
 
 ---
 
 # Purpose
 
-This project demonstrates structured troubleshooting, evidence-based analysis, and clear technical communication through realistic API support scenarios.
+This project demonstrates structured troubleshooting, evidence-based analysis, and clear technical communication through realistic API and browser support scenarios.
 
-The goal is to practice the investigation process used by Technical Support Engineers and Product Support Engineers when diagnosing API issues and documenting solutions.
+The focus is on developing the investigation process used by Technical Support Engineers and Product Support Engineers when diagnosing API integrations, browser behavior, authentication issues, and server responses.
+
+````
